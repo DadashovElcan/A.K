@@ -101,3 +101,42 @@ def send_invite_email(to_email, invite_url):
   <input type="password" name="password" required />
   <button type="submit">Qeydiyyatdan keç</button>
 </form>
+
+---
+
+### ✅ `requirements.txt` (paketlər siyahısı)
+
+```bash
+pip freeze > requirements.txt
+# A.K – Dəvətlə Qeydiyyatlı Əlaqə Platforması
+
+Bu proqram vasitəsilə yalnız xüsusi dəvət almış şəxslər qeydiyyatdan keçib, 3 dərəcə ilə (üzv, moderator, kapitan) sistemə daxil ola bilər. Başçı yalnız bir nəfərdir.
+
+## Texnologiyalar
+- Python
+- FastAPI
+- SQLite
+- JWT Authentication
+- SMTP ilə e-poçt göndərişi
+
+## Quraşdırma
+```bash
+git clone https://github.com/senin-adin/ak-app.git
+cd ak-app
+python -m venv venv
+source venv/bin/activate  # və ya venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+git push -u origin master
+git add .
+git commit -m "A.K layihəsinin ilkin versiyası"
+git push -u origin main
+echo "venv/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.db" >> .gitignore
+echo "venv/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.db" >> .gitignore
+git init
+git remote add origin https://github.com/ISTIFADƏÇİ_ADIN/ak-app.git
+cd ak-app
